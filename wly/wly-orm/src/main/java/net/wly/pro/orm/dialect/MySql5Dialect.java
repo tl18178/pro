@@ -3,10 +3,6 @@ package net.wly.pro.orm.dialect;
 /**
  * MySQL数据库方言
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 上午11:07:12
  */
 public class MySql5Dialect extends Dialect {
 

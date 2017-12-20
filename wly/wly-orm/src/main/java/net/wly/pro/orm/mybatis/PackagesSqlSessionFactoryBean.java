@@ -19,10 +19,6 @@ import org.springframework.util.ClassUtils;
 /**
  * mybatis支持扫描多个包路径
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 上午11:28:59
  */
 public class PackagesSqlSessionFactoryBean extends SqlSessionFactoryBean {
 

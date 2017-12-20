@@ -3,10 +3,6 @@ package net.wly.pro.orm.dialect;
 /**
  * 数据库方言抽象类
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 上午11:09:57
  */
 public abstract class Dialect {
 

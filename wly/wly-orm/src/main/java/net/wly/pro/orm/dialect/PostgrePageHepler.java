@@ -6,10 +6,6 @@ import java.util.regex.Pattern;
 /**
  * PostgrePageHepler
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 上午11:07:46
  */
 public class PostgrePageHepler {
     /**

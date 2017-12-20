@@ -30,10 +30,6 @@ import net.wly.pro.orm.dialect.DialectFactory;
 /**
  * PaginationStatementHandlerInterceptor
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月11日 上午11:33:26
  */
 @Intercepts({ @Signature(type = StatementHandler.class, method = "prepare", args = { Connection.class }) })
 public class PaginationStatementHandlerInterceptor implements Interceptor {

@@ -5,10 +5,6 @@ import org.apache.ibatis.session.Configuration;
 /**
  * 数据库方言工厂,产生方言对象
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 上午11:06:30
  */
 public class DialectFactory {
 

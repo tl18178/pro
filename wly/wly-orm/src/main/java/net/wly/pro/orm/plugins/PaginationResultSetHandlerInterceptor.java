@@ -22,10 +22,6 @@ import net.wly.pro.common.entity.Page;
 /**
  * PaginationResultSetHandlerInterceptor
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月11日 上午11:33:03
  */
 @Intercepts({ @Signature(type = ResultSetHandler.class, method = "handleResultSets", args = { Statement.class }) })
 public class PaginationResultSetHandlerInterceptor implements Interceptor {

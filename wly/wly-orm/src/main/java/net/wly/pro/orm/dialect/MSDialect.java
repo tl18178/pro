@@ -3,10 +3,6 @@ package net.wly.pro.orm.dialect;
 /**
  * MSSQL 数据库方言
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 上午11:06:50
  */
 public class MSDialect extends Dialect {
 
