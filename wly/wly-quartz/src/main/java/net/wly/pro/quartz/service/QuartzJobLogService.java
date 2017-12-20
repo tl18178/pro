@@ -9,10 +9,6 @@ import net.wly.pro.quartz.entity.QuartzJobLogEntity;
 /**
  * 定时任务日志
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月21日 上午11:17:26
  */
 public interface QuartzJobLogService {
 

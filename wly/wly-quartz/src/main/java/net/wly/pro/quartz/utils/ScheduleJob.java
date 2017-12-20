@@ -20,10 +20,6 @@ import net.wly.pro.quartz.manager.QuartzJobLogManager;
 /**
  * 定时任务
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月20日 下午10:54:01
  */
 public class ScheduleJob extends QuartzJobBean {
 	

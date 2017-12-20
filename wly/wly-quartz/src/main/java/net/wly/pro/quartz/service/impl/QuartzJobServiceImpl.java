@@ -22,10 +22,6 @@ import net.wly.pro.quartz.utils.ScheduleUtils;
 /**
  * 定时任务
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月20日 下午11:49:18
  */
 @Service("quartzJobService")
 public class QuartzJobServiceImpl implements QuartzJobService {

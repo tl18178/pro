@@ -11,10 +11,6 @@ import net.wly.pro.common.utils.SpringContextUtils;
 /**
  * 执行定时任务
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月20日 下午10:49:36
  */
 public class ScheduleRunnable implements Runnable {
 	

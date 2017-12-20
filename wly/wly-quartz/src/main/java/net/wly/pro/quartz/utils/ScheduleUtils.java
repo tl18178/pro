@@ -19,10 +19,6 @@ import net.wly.pro.quartz.entity.QuartzJobEntity;
 /**
  * 定时任务工具类
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月20日 下午10:49:11
  */
 public class ScheduleUtils {
     

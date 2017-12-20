@@ -14,10 +14,6 @@ import net.wly.pro.quartz.manager.QuartzJobLogManager;
 /**
  * 定时任务日志
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月20日 下午11:10:11
  */
 @Component("quartzJobLogManager")
 public class QuartzJobLogManagerImpl implements QuartzJobLogManager {
