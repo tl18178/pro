@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>net.wly.pro</groupId>
+    <artifactId>wly-pro</artifactId>
+    <version>1.2.7</version>
+  </parent>
+  <artifactId>wly-web</artifactId>
+  <packaging>war</packaging>
+  <name>wly-web Maven Webapp</name>
+  <url>http://chenlintech.com</url>
+  <description>管理后台</description>
+  
+  <dependencies>
+    
+    <dependency>
+      <groupId>net.wly.pro</groupId>
+      <artifactId>wly-common</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>net.wly.pro</groupId>
+      <artifactId>wly-shiro</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>net.wly.pro</groupId>
+      <artifactId>wly-orm</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>net.wly.pro</groupId>
+      <artifactId>wly-quartz</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>net.wly.pro</groupId>
+      <artifactId>wly-generator</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>net.wly.pro</groupId>
+      <artifactId>wly-base</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    
+  </dependencies>
+  
+  <build>
+    <finalName>wly-pro</finalName>
+  </build>
+  
+</project>
