@@ -17,10 +17,6 @@ import net.wly.pro.common.utils.CommonUtils;
 /**
  * 通用字典
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月15日 下午12:52:38
  */
 @Service("sysMacroService")
 public class SysMacroServiceImpl implements SysMacroService {

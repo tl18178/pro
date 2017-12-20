@@ -8,10 +8,6 @@ import net.wly.pro.common.entity.R;
 /**
  * 通用字典
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月15日 下午12:51:35
  */
 public interface SysMacroService {
 

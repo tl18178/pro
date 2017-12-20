@@ -18,10 +18,6 @@ import net.wly.pro.common.entity.R;
 /**
  * 行政区域
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月18日 下午3:42:04
  */
 @RestController
 @RequestMapping("/sys/area")
@@ -29,9 +25,10 @@ public class SysAreaController extends AbstractController {
 
 	@Autowired
 	private SysAreaService sysAreaService;
-	
+
 	/**
 	 * 根据父级code查询子节点，子区域列表
+	 * 
 	 * @param params
 	 * @return
 	 */
@@ -39,18 +36,20 @@ public class SysAreaController extends AbstractController {
 	public R list(@RequestBody Map<String, Object> params) {
 		return sysAreaService.listAreaByParentCode(params);
 	}
-	
+
 	/**
 	 * 根据父级code查询子节点，树形目录
+	 * 
 	 * @return
 	 */
 	@RequestMapping("/select")
 	public List<SysAreaEntity> select(@RequestParam String areaCode) {
 		return sysAreaService.listAreaByParentCode(areaCode);
 	}
-	
+
 	/**
 	 * 新增区域
+	 * 
 	 * @param area
 	 * @return
 	 */
@@ -59,9 +58,10 @@ public class SysAreaController extends AbstractController {
 	public R save(@RequestBody SysAreaEntity area) {
 		return sysAreaService.saveArea(area);
 	}
-	
+
 	/**
 	 * 查询详情
+	 * 
 	 * @param areaId
 	 * @return
 	 */
@@ -69,9 +69,10 @@ public class SysAreaController extends AbstractController {
 	public R info(@RequestBody Long areaId) {
 		return sysAreaService.getAreaById(areaId);
 	}
-	
+
 	/**
 	 * 修改区域
+	 * 
 	 * @param area
 	 * @return
 	 */
@@ -80,9 +81,10 @@ public class SysAreaController extends AbstractController {
 	public R update(@RequestBody SysAreaEntity area) {
 		return sysAreaService.updateArea(area);
 	}
-	
+
 	/**
 	 * 删除区域
+	 * 
 	 * @param id
 	 * @return
 	 */
@@ -91,5 +93,5 @@ public class SysAreaController extends AbstractController {
 	public R remove(@RequestBody Long[] id) {
 		return sysAreaService.batchRemoveArea(id);
 	}
-	
+
 }

@@ -9,10 +9,6 @@ import net.wly.pro.common.utils.CommonUtils;
 /**
  * 行政区域
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月18日 下午1:20:48
  */
 public class SysAreaEntity implements Serializable {
 

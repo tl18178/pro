@@ -7,10 +7,6 @@ import java.util.List;
 /**
  * 通用字典
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月15日 下午12:34:37
  */
 public class SysMacroEntity implements Serializable {
 

@@ -17,10 +17,6 @@ import net.wly.pro.common.utils.CommonUtils;
 /**
  * 行政区域
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月18日 下午3:40:57
  */
 @Service("sysAreaService")
 public class SysAreaServiceImpl implements SysAreaService {

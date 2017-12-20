@@ -7,10 +7,6 @@ import net.wly.pro.base.entity.SysMacroEntity;
 /**
  * 通用字典
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月15日 下午12:49:14
  */
 public interface SysMacroManager {
 
