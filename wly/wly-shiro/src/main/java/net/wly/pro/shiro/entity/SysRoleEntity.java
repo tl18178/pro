@@ -8,10 +8,6 @@ import java.util.List;
 /**
  * 角色
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月10日 上午10:48:22
  */
 public class SysRoleEntity implements Serializable {
 	

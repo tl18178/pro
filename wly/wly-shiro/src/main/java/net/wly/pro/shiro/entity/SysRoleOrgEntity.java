@@ -6,10 +6,6 @@ import java.io.Serializable;
 /**
  * 角色与机构对应关系
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月17日 上午10:36:09
  */
 public class SysRoleOrgEntity implements Serializable {
 	

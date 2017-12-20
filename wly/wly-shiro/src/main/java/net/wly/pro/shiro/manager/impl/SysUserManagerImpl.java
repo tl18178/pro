@@ -22,10 +22,6 @@ import net.wly.pro.shiro.manager.SysUserManager;
 /**
  * 系统用户
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月11日 上午11:44:21
  */
 @Component("sysUserManager")
 public class SysUserManagerImpl implements SysUserManager {

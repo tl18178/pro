@@ -16,10 +16,6 @@ import net.wly.pro.shiro.manager.SysMenuManager;
 /**
  * 产生责任链，确定每个url的访问权限
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年9月5日 下午1:29:36
  */
 public class ChainDefinitionSectionMetaSource implements FactoryBean<Ini.Section> {
 

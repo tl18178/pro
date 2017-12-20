@@ -8,10 +8,6 @@ import net.wly.pro.shiro.entity.SysMenuEntity;
 /**
  * 系统菜单
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月10日 上午10:34:59
  */
 public interface SysMenuManager {
 	

@@ -18,10 +18,6 @@ import net.wly.pro.shiro.service.SysUserService;
 /**
  * 系统用户
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月11日 上午11:47:17
  */
 @Service("sysUserService")
 public class SysUserServiceImpl implements SysUserService {

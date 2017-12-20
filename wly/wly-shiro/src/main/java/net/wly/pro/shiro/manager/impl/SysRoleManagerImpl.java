@@ -17,10 +17,6 @@ import net.wly.pro.shiro.manager.SysRoleManager;
 /**
  * 系统角色
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月12日 上午12:39:48
  */
 @Component("sysRoleManager")
 public class SysRoleManagerImpl implements SysRoleManager {

@@ -11,10 +11,6 @@ import net.wly.pro.common.entity.SysUserEntity;
 /**
  * 系统用户dao
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 下午3:26:05
  */
 @MapperScan
 public interface SysUserMapper extends BaseMapper<SysUserEntity> {

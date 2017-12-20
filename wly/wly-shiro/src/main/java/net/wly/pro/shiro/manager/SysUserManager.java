@@ -10,10 +10,6 @@ import net.wly.pro.common.entity.SysUserEntity;
 /**
  * 系统用户
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月11日 上午11:43:01
  */
 public interface SysUserManager {
 

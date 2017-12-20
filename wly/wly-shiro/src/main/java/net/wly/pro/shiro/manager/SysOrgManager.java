@@ -7,10 +7,6 @@ import net.wly.pro.shiro.entity.SysOrgEntity;
 /**
  * 组织机构
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月17日 上午11:31:59
  */
 public interface SysOrgManager {
 

@@ -10,10 +10,6 @@ import net.wly.pro.shiro.entity.SysMenuEntity;
 /**
  * 系统菜单dao
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月10日 上午12:21:34
  */
 @MapperScan
 public interface SysMenuMapper extends BaseMapper<SysMenuEntity> {

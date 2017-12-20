@@ -14,10 +14,6 @@ import net.wly.pro.shiro.manager.SysOrgManager;
 /**
  * 组织架构
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月17日 上午11:32:15
  */
 @Component("sysOrgManager")
 public class SysOrgManagerImpl implements SysOrgManager {

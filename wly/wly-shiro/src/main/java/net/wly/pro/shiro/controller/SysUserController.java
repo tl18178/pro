@@ -18,10 +18,6 @@ import net.wly.pro.shiro.service.SysUserService;
 /**
  * 系统用户
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 下午9:04:59
  */
 @RestController
 @RequestMapping("/sys/user")

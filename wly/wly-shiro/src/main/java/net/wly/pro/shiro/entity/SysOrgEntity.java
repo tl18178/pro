@@ -7,10 +7,6 @@ import java.util.List;
 /**
  * 组织架构
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月17日 上午10:31:09
  */
 public class SysOrgEntity implements Serializable {
 

@@ -22,10 +22,6 @@ import net.wly.pro.shiro.manager.SysUserManager;
 /**
  * 认证
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 下午3:42:17
  */
 public class UserRealm extends AuthorizingRealm {
     
