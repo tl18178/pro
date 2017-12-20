@@ -21,10 +21,6 @@ import net.wly.pro.generator.utils.GenUtils;
 /**
  * 代码生成器
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月28日 下午8:55:51
  */
 @Service("sysGeneratorService")
 public class SysGeneratorServiceImpl implements SysGeneratorService {

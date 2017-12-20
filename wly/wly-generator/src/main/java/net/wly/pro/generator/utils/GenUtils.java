@@ -31,10 +31,6 @@ import net.wly.pro.generator.entity.TableEntity;
 /**
  * 代码生成器 工具类
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月29日 上午8:55:05
  */
 public class GenUtils {
 

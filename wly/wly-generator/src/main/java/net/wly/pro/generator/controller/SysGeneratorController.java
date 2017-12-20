@@ -21,10 +21,6 @@ import net.wly.pro.generator.service.SysGeneratorService;
 /**
  * 代码生成器
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月28日 下午8:56:30
  */
 @Controller
 @RequestMapping("/sys/generator")
