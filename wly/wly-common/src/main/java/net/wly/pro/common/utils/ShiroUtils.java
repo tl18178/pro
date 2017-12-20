@@ -9,10 +9,6 @@ import net.wly.pro.common.entity.SysUserEntity;
 /**
  * Shiro工具类
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 下午2:39:59
  */
 public class ShiroUtils {
 	

@@ -8,10 +8,6 @@ import net.wly.pro.common.entity.Query;
 /**
  * 基础dao
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月12日 下午12:23:18
  */
 public interface BaseMapper<T> {
 	

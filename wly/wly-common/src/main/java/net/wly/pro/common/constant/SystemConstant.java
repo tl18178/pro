@@ -3,10 +3,6 @@ package net.wly.pro.common.constant;
 /**
  * 系统级静态变量
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 下午1:35:38
  */
 public class SystemConstant {
 	

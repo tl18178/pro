@@ -16,10 +16,6 @@ import net.wly.pro.common.service.SysLogService;
 /**
  * 系统日志
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月14日 下午10:01:36
  */
 @RestController
 @RequestMapping("/sys/log")

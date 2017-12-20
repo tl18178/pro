@@ -10,10 +10,6 @@ import com.alibaba.fastjson.JSONObject;
 /**
  * json工具类(fastjson)
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月11日 下午3:35:28
  */
 public class JSONUtils {
 

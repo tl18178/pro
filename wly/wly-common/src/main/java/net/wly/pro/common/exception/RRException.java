@@ -3,10 +3,6 @@ package net.wly.pro.common.exception;
 /**
  * 自定义异常
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 上午11:59:32
  */
 public class RRException extends RuntimeException {
 	

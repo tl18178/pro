@@ -9,10 +9,6 @@ import net.wly.pro.common.utils.ShiroUtils;
 /**
  * Controller公共组件
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 下午2:43:23
  */
 public abstract class AbstractController {
 	

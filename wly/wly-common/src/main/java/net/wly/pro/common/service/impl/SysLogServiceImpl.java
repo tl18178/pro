@@ -16,10 +16,6 @@ import net.wly.pro.common.utils.CommonUtils;
 /**
  * 系统日志
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月14日 下午8:41:29
  */
 @Service("sysLogService")
 public class SysLogServiceImpl implements SysLogService {

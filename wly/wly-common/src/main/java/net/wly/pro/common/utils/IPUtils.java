@@ -9,10 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * IP地址
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 下午12:02:56
  */
 public class IPUtils {
 

@@ -14,10 +14,6 @@ import net.wly.pro.common.entity.Query;
 /**
  * web工具类
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月13日 下午3:18:22
  */
 public class WebUtils {
 	

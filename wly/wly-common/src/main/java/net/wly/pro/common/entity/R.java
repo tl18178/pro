@@ -6,10 +6,6 @@ import java.util.Map;
 /**
  * 页面响应entity
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 上午11:40:42
  */
 public class R extends HashMap<String, Object> {
 	

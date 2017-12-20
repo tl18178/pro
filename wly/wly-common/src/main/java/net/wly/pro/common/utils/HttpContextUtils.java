@@ -8,10 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * http上下文
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月14日 下午8:04:00
  */
 public class HttpContextUtils {
 

@@ -15,10 +15,6 @@ import net.wly.pro.common.entity.R;
 /**
  * 异常处理器
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 上午11:59:44
  */
 @RestControllerAdvice
 public class RRExceptionHandler {
