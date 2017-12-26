@@ -65,6 +65,6 @@
 			quartz_job_log
 	</delete>
 	
-	<cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
+<!-- 	<cache type="org.mybatis.caches.ehcache.EhcacheCache"/> -->
 	
 </mapper>
