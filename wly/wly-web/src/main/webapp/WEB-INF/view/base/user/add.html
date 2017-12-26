@@ -8,19 +8,28 @@
 	<div id="dpLTE" class="container-fluid" v-cloak>
 		<table class="form" id="form">
 			<tr>
+				 <td class="formTitle">所属机构<font face="宋体">*</font></td>
+	            <td class="formValue">
+					<input type="text" class="form-control pointer" placeholder="所属机构" v-model="user.orgName" @click="orgTree" isvalid="yes" checkexpession="NotNull" readonly="readonly">
+	            </td>
+				<td class="formTitle"></td>
+	            <td class="formValue">
+	            </td>
+        	</tr>
+			<tr>
 	            <td class="formTitle">用户名<font face="宋体">*</font></td>
 	            <td class="formValue">
 					<input type="text" class="form-control" placeholder="用户名" v-model="user.username" isvalid="yes" checkexpession="NotNull">
 	            </td>
-	            <td class="formTitle">所属机构<font face="宋体">*</font></td>
-	            <td class="formValue">
-					<input type="text" class="form-control pointer" placeholder="所属机构" v-model="user.orgName" @click="orgTree" isvalid="yes" checkexpession="NotNull" readonly="readonly">
-	            </td>
-        	</tr>
-        	<tr>
 	            <td class="formTitle">密码<font face="宋体">*</font></td>
 	            <td class="formValue">
 					<input type="text" class="form-control" placeholder="密码" v-model="user.password" isvalid="yes" checkexpession="NotNull">
+	            </td>
+        	</tr>
+        	<tr>
+	            <td class="formTitle">昵称<font face="宋体">*</font></td>
+	            <td class="formValue">
+					<input type="text" class="form-control" placeholder="昵称" v-model="user.nickName" isvalid="yes" checkexpession="NotNull">
 	            </td>
         		<td class="formTitle">邮箱</td>
 	            <td class="formValue">

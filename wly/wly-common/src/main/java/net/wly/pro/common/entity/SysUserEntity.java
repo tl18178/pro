@@ -74,6 +74,11 @@ public class SysUserEntity implements Serializable {
 	private Timestamp gmtModified;
 	
 	/**
+	 * 昵称
+	 */
+	private String nickName;
+	
+	/**
 	 * 角色id列表
 	 */
 	private List<Long> roleIdList;
@@ -184,6 +189,14 @@ public class SysUserEntity implements Serializable {
 
 	public void setRoleIdList(List<Long> roleIdList) {
 		this.roleIdList = roleIdList;
+	}
+
+	public String getNickName() {
+		return nickName;
+	}
+
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
 	}
 
 }

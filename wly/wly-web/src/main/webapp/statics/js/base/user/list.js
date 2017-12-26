@@ -29,6 +29,10 @@ function getGrid() {
 			field : "userId",
 			title : "编号",
 			width : "50px"
+		},{
+			field : "nickName",
+			title : "昵称",
+			width : "100px"
 		}, {
 			field : "username",
 			title : "用户名",
@@ -40,7 +44,7 @@ function getGrid() {
 		}, {
 			field : "email",
 			title : "邮箱",
-			width : "300px"
+			width : "200px"
 		}, {
 			field : "mobile",
 			title : "手机号",
