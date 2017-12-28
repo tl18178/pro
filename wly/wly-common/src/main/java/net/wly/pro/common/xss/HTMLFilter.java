@@ -10,10 +10,6 @@ import java.util.regex.Pattern;
 /**
  * HTMLFilter
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 下午12:01:14
  */
 public final class HTMLFilter {
 

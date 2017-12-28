@@ -12,9 +12,15 @@
 		http://www.springframework.org/schema/mvc 
      	http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
 
-	<context:component-scan base-package="net.wly.pro" />
+	<!-- 自动扫描包 ,将带有注解的类 纳入spring容器管理，只扫描controller -->
+	<context:component-scan base-package="net.wly.pro" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"></context:include-filter>
+		<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.RestController"></context:include-filter>
+	</context:component-scan>
+
 	<context:annotation-config />
 	<mvc:default-servlet-handler />
+
 	<aop:aspectj-autoproxy proxy-target-class="true" />
 	<mvc:annotation-driven>
 		<mvc:message-converters register-defaults="true">
@@ -94,22 +100,6 @@
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="maxUploadSize" value="1000000000" />
-	</bean>
-
-	<!-- Kaptcha验证码生成器 -->
-	<bean name="producer" class="com.google.code.kaptcha.impl.DefaultKaptcha"
-		scope="singleton">
-		<property name="config">
-			<bean class="com.google.code.kaptcha.util.Config">
-				<constructor-arg>
-					<props>
-						<prop key="kaptcha.border">no</prop>
-						<prop key="kaptcha.textproducer.font.color">black</prop>
-						<prop key="kaptcha.textproducer.char.space">5</prop>
-					</props>
-				</constructor-arg>
-			</bean>
-		</property>
 	</bean>
 
 </beans>
