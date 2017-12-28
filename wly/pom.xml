@@ -15,6 +15,7 @@
         <module>wly-orm</module>
         <module>wly-quartz</module>
         <module>wly-generator</module>
+        <module>wly-blog</module>
     </modules>
 
     <properties>

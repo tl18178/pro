@@ -51,6 +51,12 @@
       <version>${project.version}</version>
     </dependency>
     
+    <dependency>
+      <groupId>net.wly.pro</groupId>
+      <artifactId>wly-blog</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    
   </dependencies>
   
   <build>
