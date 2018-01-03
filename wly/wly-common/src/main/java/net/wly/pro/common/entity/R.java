@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class R extends HashMap<String, Object> {
 	
-	private static final long serialVersionUID = 1L;
+private static final long serialVersionUID = 1L;
 	
 	public R() {
 		put("code", 0);
@@ -46,8 +46,10 @@ public class R extends HashMap<String, Object> {
 		return new R();
 	}
 
+	@Override
 	public R put(String key, Object value) {
 		super.put(key, value);
 		return this;
 	}
+	
 }

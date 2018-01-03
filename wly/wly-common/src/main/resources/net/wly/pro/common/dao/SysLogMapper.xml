@@ -2,68 +2,84 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="net.wly.pro.common.dao.SysLogMapper">
-	
+
 	<select id="listForPage" resultType="SysLogEntity">
 		SELECT
-			id,
-			user_id,
-			username,
-			operation,
-			time,
-			method,
-			params,
-			ip,
-			gmt_create
+		id,
+		type,
+		user_id,
+		username,
+		operation,
+		method,
+		params,
+		ip,
+		result,
+		remark,
+		gmt_create
 		FROM
-			sys_log
+		sys_log
 		<where>
-			<if test="username != null and username.trim() != ''">
+			<if test=" type != null ">
+				type = #{type}
+			</if>
+			<if
+				test=" startDate != null and startDate != '' and endDate != null and endDate != '' ">
+				AND DATE_FORMAT( gmt_create, '%Y-%m-%d') BETWEEN #{startDate}
+				AND #{endDate}
+			</if>
+			<if test=" username != null and username.trim() != '' ">
 				AND username LIKE concat('%',#{username},'%')
-				OR operation LIKE concat('%',#{username},'%')
+				OR operation
+				LIKE concat('%',#{username},'%')
 			</if>
 		</where>
 		ORDER BY
-			gmt_create DESC
+		gmt_create DESC
 	</select>
-	
+
 	<insert id="save">
 		INSERT INTO sys_log (
-			user_id,
-			username,
-			operation,
-			time,
-			method,
-			params,
-			ip,
-			gmt_create
+		type,
+		user_id,
+		username,
+		operation,
+		method,
+		params,
+		ip,
+		result,
+		remark,
+		gmt_create
 		)
 		VALUES (
-			#{userId},
-			#{username}, 
-			#{operation},
-			#{time}, 
-			#{method}, 
-			#{params}, 
-			#{ip}, 
-			NOW()
+		#{type},
+		#{userId},
+		#{username},
+		#{operation},
+		#{method},
+		#{params},
+		#{ip},
+		#{result},
+		#{remark},
+		NOW()
 		)
 	</insert>
-	
+
 	<delete id="batchRemove">
 		DELETE
 		FROM
-			sys_log
+		sys_log
 		WHERE
-			id IN
-		<foreach item="id" collection="array" open="(" separator="," close=")">
+		id IN
+		<foreach item="id" collection="array" open="(" separator=","
+			close=")">
 			#{id}
 		</foreach>
 	</delete>
-	
+
 	<delete id="batchRemoveAll">
 		DELETE
 		FROM
-			sys_log
+		sys_log
 	</delete>
 
 </mapper>
