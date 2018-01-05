@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.session.Session;
+import org.apache.shiro.session.UnknownSessionException;
 import org.apache.shiro.session.mgt.ValidatingSession;
 import org.apache.shiro.session.mgt.eis.EnterpriseCacheSessionDAO;
 import org.apache.shiro.subject.support.DefaultSubjectContext;
@@ -32,21 +33,30 @@ public class UserSessionDAO extends EnterpriseCacheSessionDAO {
 	 */
 	@Override
 	protected void doUpdate(Session session) {
-		super.doUpdate(session);
-		// 如果会话过期/停止 没必要再更新了
-		if (session instanceof ValidatingSession && !((ValidatingSession) session).isValid()) {
-			return;
-		}
-		if (session instanceof UserSession) {
-			// 如果没有主要字段(除lastAccessTime以外其他字段)发生改变
-			UserSession userSession = (UserSession) session;
-			if (!userSession.isChanged()) {
+		try {
+			// 如果会话过期/停止 没必要再更新了
+			if (session instanceof ValidatingSession && !((ValidatingSession) session).isValid()) {
 				return;
 			}
-			String sessionKey = generateSessionKey(session);
-			setSession(sessionKey, session);
-			LOG.debug("doUpdate >>>>> sessionId：{}", session.getId());
+		} catch (Exception e) {
+			LOG.warn("验证session失败", e.getMessage());
 		}
+
+		try {
+			if (session instanceof UserSession) {
+				// 如果没有主要字段(除lastAccessTime以外其他字段)发生改变
+				UserSession userSession = (UserSession) session;
+				if (!userSession.isChanged()) {
+					return;
+				}
+				String sessionKey = generateSessionKey(session);
+				setSession(sessionKey, session);
+				LOG.debug("doUpdate >>>>> sessionId：{}", session.getId());
+			}
+		} catch (Exception e) {
+			LOG.warn("更新session失败", e.getMessage());
+		}
+
 	}
 
 	/**
@@ -56,10 +66,14 @@ public class UserSessionDAO extends EnterpriseCacheSessionDAO {
 	 */
 	@Override
 	protected void doDelete(Session session) {
-		super.doDelete(session);
-		String sessionKey = generateSessionKey(session);
-		RedisUtils.remove(sessionKey);
-		LOG.debug("doDelete >>>>> sessionId：{}", session.getId());
+		try {
+			super.doDelete(session);
+			String sessionKey = generateSessionKey(session);
+			RedisUtils.remove(sessionKey);
+			LOG.debug("doDelete >>>>> sessionId：{}", session.getId());
+		} catch (Exception e) {
+			LOG.warn("删除session失败", e.getMessage());
+		}
 	}
 
 	/**
@@ -71,9 +85,14 @@ public class UserSessionDAO extends EnterpriseCacheSessionDAO {
 	@Override
 	protected Serializable doCreate(Session session) {
 		Serializable sessionId = super.doCreate(session);
-		String sessionKey = generateSessionKey(sessionId);
-		setSession(sessionKey, session);
-		LOG.debug("doCreate >>>>> sessionId：{}", sessionId);
+		assignSessionId(session, sessionId);
+		try {
+			String sessionKey = generateSessionKey(sessionId);
+			setSession(sessionKey, session);
+			LOG.debug("doCreate >>>>> sessionId：{}", sessionId);
+		} catch (Exception e) {
+			LOG.warn("创建session失败", e.getMessage());
+		}
 		return sessionId;
 	}
 
@@ -89,7 +108,7 @@ public class UserSessionDAO extends EnterpriseCacheSessionDAO {
 		if (session == null || session.getAttribute(DefaultSubjectContext.PRINCIPALS_SESSION_KEY) == null) {
 			session = this.doReadSession(sessionId);
 			if (session == null) {
-				LOG.debug("There is no session with id：{}", sessionId);
+				throw new UnknownSessionException("There is no session with id: {" + sessionId + "}");
 			} else {
 				cache(session, session.getId());
 			}
@@ -105,8 +124,13 @@ public class UserSessionDAO extends EnterpriseCacheSessionDAO {
 	 */
 	@Override
 	protected Session doReadSession(Serializable sessionId) {
-		Session session = getSession(generateSessionKey(sessionId));
-		LOG.debug("doReadSession >>>>> sessionId：{}", session.getId());
+		Session session = null;
+		try {
+			session = getSession(generateSessionKey(sessionId));
+			LOG.debug("doReadSession >>>>> sessionId：{}", session.getId());
+		} catch (Exception e) {
+			LOG.warn("读取session失败", e.getMessage());
+		}
 		return session;
 	}
 
