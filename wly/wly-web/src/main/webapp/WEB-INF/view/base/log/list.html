@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>系统日志</title>
-#parse("include/header.html")
-</head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="include/header_css::header('系统日志')"></head>
 <body>
 <div id="dpLTE" class="container-fluid" v-cloak>
 	<div class="row">
-		<div class="col-md-6 form-inline pull-left">
+		<div class="col-md-9 form-inline pull-left">
 			<div class="form-group">
 				<select class="form-control" v-model="type">
-					<option value="-1">全部</option>
 					<option value="1">登录日志</option>
 					<option value="2">访问日志</option>
 					<option value="3">操作日志</option>
@@ -22,7 +18,7 @@
 		    	<input v-model="keyword" @keyup.enter="load" class="form-control" placeholder="请输入查询关键字" style="width: 220px;" />
 			</div>
 			<div class="input-group">
-				<input id="dateRange" :value="dateRange" class="form-control" placeholder="请选择时间范围"  placeholder="" style="width: 190px;"/>
+				<input id="dateRange" :value="dateRange" class="form-control" placeholder="请选择时间范围" style="width: 190px;"/>
 				<div class="input-group-btn">
 					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{dateRangeText}} <span class="caret"></span></button>
 					<ul class="dropdown-menu">
@@ -38,7 +34,7 @@
 			    <a class="btn btn-primary" @click="load"><i class="fa fa-search"></i>&nbsp;查询</a>
 			</div>
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-3">
 			<div class="btn-toolbar pull-right">
 				<div class="btn-group">
 		            <a v-if="hasPermission('sys:log:list')" class="btn btn-default" onclick="reload();"><i class="fa fa-refresh"></i>&nbsp;刷新</a>
@@ -52,7 +48,7 @@
 		<table id="dataGrid"></table>
 	</div>
 </div>
-#parse("include/footer.html")
-<script src="${rc.contextPath}/statics/js/base/log/list.js?_${date.systemTime}"></script>
+<div th:include="include/footer_js::footer"></div>
+<script th:src="@{/statics/js/base/log/list.js}"></script>
 </body>
 </html>

@@ -1,35 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>新增-用户管理</title>
-#parse("include/header.html")
-</head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="include/header_css::header('新增-用户管理')"></head>
 <body>
 	<div id="dpLTE" class="container-fluid" v-cloak>
 		<table class="form" id="form">
-			<tr>
-				 <td class="formTitle">所属机构<font face="宋体">*</font></td>
-	            <td class="formValue">
-					<input type="text" class="form-control pointer" placeholder="所属机构" v-model="user.orgName" @click="orgTree" isvalid="yes" checkexpession="NotNull" readonly="readonly">
-	            </td>
-				<td class="formTitle"></td>
-	            <td class="formValue">
-	            </td>
-        	</tr>
 			<tr>
 	            <td class="formTitle">用户名<font face="宋体">*</font></td>
 	            <td class="formValue">
 					<input type="text" class="form-control" placeholder="用户名" v-model="user.username" isvalid="yes" checkexpession="NotNull">
 	            </td>
-	            <td class="formTitle">密码<font face="宋体">*</font></td>
+	            <td class="formTitle">所属机构<font face="宋体">*</font></td>
 	            <td class="formValue">
-					<input type="text" class="form-control" placeholder="密码" v-model="user.password" isvalid="yes" checkexpession="NotNull">
+					<input type="text" class="form-control pointer" placeholder="所属机构" v-model="user.orgName" @click="orgTree" isvalid="yes" checkexpession="NotNull" readonly="readonly">
 	            </td>
         	</tr>
         	<tr>
-	            <td class="formTitle">昵称<font face="宋体">*</font></td>
+	            <td class="formTitle">密码<font face="宋体">*</font></td>
 	            <td class="formValue">
-					<input type="text" class="form-control" placeholder="昵称" v-model="user.nickName" isvalid="yes" checkexpession="NotNull">
+					<input type="text" class="form-control" placeholder="密码" v-model="user.password" isvalid="yes" checkexpession="NotNull">
 	            </td>
         		<td class="formTitle">邮箱</td>
 	            <td class="formValue">
@@ -68,8 +56,7 @@
 			</tr>
 		</table>
 	</div>
-	#parse("include/footer.html")
-	<script
-		src="${rc.contextPath}/statics/js/base/user/add.js?_${date.systemTime}"></script>
+	<div th:include="include/footer_js::footer"></div>
+	<script th:src="@{/statics/js/base/user/add.js}"></script>
 </body>
 </html>
