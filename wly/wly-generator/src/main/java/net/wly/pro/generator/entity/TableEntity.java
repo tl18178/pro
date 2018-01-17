@@ -2,6 +2,7 @@ package net.wly.pro.generator.entity;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,37 +14,51 @@ public class TableEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
+	 * 
 	 * 表名
+	 * 
 	 */
 	private String tableName;
-	
+
 	/**
+	 * 
 	 * 表格备注
+	 * 
 	 */
 	private String tableComment;
-	
+
 	/**
+	 * 
 	 * 主键
+	 * 
 	 */
 	private ColumnEntity pk;
-	
+
 	/**
+	 * 
 	 * 表格列
+	 * 
 	 */
 	private List<ColumnEntity> columns;
-	
+
 	/**
+	 * 
 	 * 类名，作为实例对象使用（sysUser）
+	 * 
 	 */
 	private String objName;
-	
+
 	/**
+	 * 
 	 * 类名，作为类型使用（SysUser）
+	 * 
 	 */
 	private String className;
-	
+
 	/**
+	 * 
 	 * 创建时间
+	 * 
 	 */
 	private Timestamp createTime;
 
@@ -106,5 +121,19 @@ public class TableEntity implements Serializable {
 	public void setCreateTime(Timestamp createTime) {
 		this.createTime = createTime;
 	}
-	
+
+	public void addColumn(ColumnEntity columnEntity) {
+		if (this.columns == null) {
+			columns = new ArrayList<>();
+		}
+		columns.add(columnEntity);
+	}
+
+	@Override
+	public String toString() {
+		return "TableEntity{" + "tableName='" + tableName + '\'' + ", tableComment='" + tableComment + '\'' + ", pk="
+				+ pk + ", columns=" + columns + ", objName='" + objName + '\'' + ", className='" + className + '\''
+				+ ", createTime=" + createTime + '}';
+	}
+
 }
